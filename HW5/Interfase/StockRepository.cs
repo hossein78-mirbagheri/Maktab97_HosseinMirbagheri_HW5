@@ -14,11 +14,11 @@ namespace HW5.Interfase
         ProductRepository product = new ProductRepository();
         private List<Stock> _stocks;
 
-        public StockRepository()
-        {
-            FileStream JsonProductfile = File.Open(@"..\..\..\DataBase\Stock.json",FileMode.OpenOrCreate);
-            _stocks = JsonSerializer.Deserialize<List<Stock>>(JsonProductfile);
-        }
+        //public StockRepository()
+        //{
+        //    FileStream JsonProductfile = File.Open(@"..\..\..\DataBase\Stock.json",FileMode.OpenOrCreate);
+        //    _stocks = JsonSerializer.Deserialize<List<Stock>>(JsonProductfile);
+        //}
         public void BuyProduct(Stock productInStock)
         {
            bool ChosenProduct = _stocks.Any(a => a.ProductId == productInStock.ProductId);
