@@ -10,7 +10,7 @@ namespace HW5.Interfase
         private List<Product> _products;
         public ProductRepository()
         {
-            FileStream JsonProductfile = File.Open(@"..\DataBase\Product.json", FileMode.OpenOrCreate);
+            FileStream JsonProductfile = File.Open(@"..\..\..\DataBase\Product.json", FileMode.OpenOrCreate);
             _products = JsonSerializer.Deserialize<List<Product>>(JsonProductfile);
         }
         public void CheckProductName(string productName)

@@ -16,7 +16,7 @@ namespace HW5.Interfase
 
         public StockRepository()
         {
-            FileStream JsonProductfile = File.Open(@"..\DataBase\Stock.json",FileMode.OpenOrCreate);
+            FileStream JsonProductfile = File.Open(@"..\..\..\DataBase\Stock.json",FileMode.OpenOrCreate);
             _stocks = JsonSerializer.Deserialize<List<Stock>>(JsonProductfile);
         }
         public void BuyProduct(Stock productInStock)
